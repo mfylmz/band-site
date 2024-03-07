@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"bio.css"}
+{"version":3,"sources":["bio.scss","bio.css"],"names":[],"mappings":"AAOA;EACE,yBAJqB;EAKrB,YAAA;EACA,kBAAA;ACNF;ADQE;EACE,UAAA;EACA,SAAA;EACA,aAAA;EAEA,gBAAA;EACA,uBAAA;EACA,QAAA;ACPJ;ADYE;;EAEE,0BAAA;EAEA,gBAAA;EACA,iBAAA;EACA,kBAAA;ACXJ;;ADeA;EACE,kBAAA;EACA,yBAAA;ACZF;ADcE;EACE,WAAA;ACZJ;ADcE;EACE,kBAAA;EACA,QAAA;EACA,SAAA;EACA,iCAAA;EACA,gBAAA;EACA,WAAA;EAEA,kBAAA;ACbJ","file":"bio.css"}

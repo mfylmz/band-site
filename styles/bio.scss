@@ -1,3 +1,52 @@
 $layout-breakpoint-small: 320px;
 @media (min-width: $layout-breakpoint-small) {
 }
+
+$color-bandsite-black: #323232;
+$color-silver: #afafaf;
+
+nav {
+  background-color: $color-bandsite-black;
+  color: white;
+  text-align: center;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    list-style: none;
+    justify-content: center;
+    gap: 50%;
+  }
+  li {
+  }
+
+  li:hover,
+  li:active {
+    border: 0.1rem solid white;
+
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.header__background {
+  position: relative;
+  background-color: #afafaf;
+
+  img {
+    width: 100%;
+  }
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    font-weight: 700;
+    color: #fff;
+
+    text-align: center;
+  }
+}
