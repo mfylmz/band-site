@@ -2,38 +2,38 @@ $layout-breakpoint-small: 320px 767px;
 @media (min-width: $layout-breakpoint-small) {
 }
 @mixin page_header--font {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 
 @mixin section_header--font {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 
 @mixin subheader--font {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
 }
 
 @mixin body--font {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-weight: 400;
 }
 
 @mixin footer--font {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
 }
 
 @mixin labels-buttons--font {
-  font-size: 10px;
-  line-height: 20px;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
   font-weight: 700;
 }
 $color-bandsite-black: #323232;
@@ -42,7 +42,7 @@ $color-white: white;
 
 nav {
   @include page_header--font;
-  padding-top: 20px;
+  padding-top: 1.25rem;
 
   background-color: $color-bandsite-black;
   color: white;
@@ -50,7 +50,7 @@ nav {
 
   ul {
     @include subheader--font;
-    padding-top: 10px;
+    padding-top: 0.625rem;
 
     display: flex;
 
@@ -71,7 +71,9 @@ nav {
 
 .header__background {
   position: relative;
-  height: 12.5rem;
+  height: 100%;
+
+  background-color: #e1e1e1;
 
   .header__background--img img {
     width: 100%;
@@ -91,12 +93,12 @@ nav {
 .main {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 0.938rem;
 
   h2 {
     @include section_header--font;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 0.625rem;
+    padding-top: 0.625rem;
   }
 
   .main--image img {
@@ -105,22 +107,53 @@ nav {
   p {
     @include body--font();
     display: block;
-    margin-top: 15px;
+    margin-top: 0.938rem;
   }
 }
-
+.text--font{
+  @include section_header--font;
+}
 .photo__section {
   background-color: #e1e1e1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Add padding around the photo section */
+
+  h2 {
+    @include section_header--font;
+  }
 
   img {
-    width: 100%;
-    height: 100%;
+    margin: 0.5rem; /* Add margin around each image */
+    max-width: 100%;
+    height: auto;
   }
 }
 
 footer {
   background-color: $color-bandsite-black;
-  p, h2{
+text-align:left;
+padding-left: 1rem;
+  h2 {
+    color: $color-white;
+    @include section_header--font;
+  }
+  p {
     color: $color-white;
   }
 }
+
+.get_intouch {
+  img {
+    display: inline-flex;
+    padding: 4%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+

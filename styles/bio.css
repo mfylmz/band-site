@@ -1,17 +1,17 @@
 nav {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
-  padding-top: 20px;
+  padding-top: 1.25rem;
   background-color: #323232;
   color: white;
   text-align: center;
 }
 nav ul {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
-  padding-top: 10px;
+  padding-top: 0.625rem;
   display: flex;
   list-style: none;
   justify-content: center;
@@ -27,15 +27,16 @@ nav li:active {
 
 .header__background {
   position: relative;
-  height: 12.5rem;
+  height: 100%;
+  background-color: #e1e1e1;
 }
 .header__background .header__background--img img {
   width: 100%;
   height: 30%;
 }
 .header__background .header__background--text h2 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   position: absolute;
   top: 50%;
@@ -48,37 +49,71 @@ nav li:active {
 .main {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  margin: 0.938rem;
 }
 .main h2 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
 }
 .main .main--image img {
   width: 100%;
 }
 .main p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-weight: 400;
   display: block;
-  margin-top: 15px;
+  margin-top: 0.938rem;
+}
+
+.text--font {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 .photo__section {
   background-color: #e1e1e1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Add padding around the photo section */
+}
+.photo__section h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 .photo__section img {
-  width: 100%;
-  height: 100%;
+  margin: 0.5rem; /* Add margin around each image */
+  max-width: 100%;
+  height: auto;
 }
 
 footer {
   background-color: #323232;
+  text-align: left;
+  padding-left: 1rem;
 }
-footer p, footer h2 {
+footer h2 {
   color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+footer p {
+  color: white;
+}
+
+.get_intouch img {
+  display: inline-flex;
+  padding: 4%;
+  width: 30px;
+  height: 30px;
 }/*# sourceMappingURL=bio.css.map */
