@@ -1,4 +1,4 @@
-$layout-breakpoint-small: 320px;
+$layout-breakpoint-small: 320px 767px;
 @media (min-width: $layout-breakpoint-small) {
 }
 @mixin page_header--font {
@@ -38,6 +38,7 @@ $layout-breakpoint-small: 320px;
 }
 $color-bandsite-black: #323232;
 $color-silver: #afafaf;
+$color-white: white;
 
 nav {
   @include page_header--font;
@@ -60,7 +61,7 @@ nav {
 
   li:hover,
   li:active {
-    border: 0.1rem solid white;
+    border: 0.1rem solid $color-white;
 
     border-top: none;
     border-left: none;
@@ -70,12 +71,11 @@ nav {
 
 .header__background {
   position: relative;
-  height: 200px;
+  height: 12.5rem;
 
-  background: linear-gradient($color-silver, $color-silver);
   .header__background--img img {
     width: 100%;
-    height: 30vh;
+    height: 30%;
   }
   .header__background--text h2 {
     @include section_header--font;
@@ -84,27 +84,43 @@ nav {
     left: 50%;
     transform: translate(-100%, -50%);
 
-    color: #fff;
+    color: $color-white;
     text-align: center;
   }
 }
 .main {
-  
   display: flex;
   flex-direction: column;
   margin: 15px;
-  
-h2{
-  padding: 15px;
-}
+
+  h2 {
+    @include section_header--font;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
 
   .main--image img {
     width: 100%;
-    
   }
-  p{
+  p {
     @include body--font();
     display: block;
     margin-top: 15px;
+  }
+}
+
+.photo__section {
+  background-color: #e1e1e1;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  background-color: $color-bandsite-black;
+  p, h2{
+    color: $color-white;
   }
 }

@@ -27,12 +27,11 @@ nav li:active {
 
 .header__background {
   position: relative;
-  height: 200px;
-  background: linear-gradient(#afafaf, #afafaf);
+  height: 12.5rem;
 }
 .header__background .header__background--img img {
   width: 100%;
-  height: 30vh;
+  height: 30%;
 }
 .header__background .header__background--text h2 {
   font-size: 24px;
@@ -42,7 +41,7 @@ nav li:active {
   top: 50%;
   left: 50%;
   transform: translate(-100%, -50%);
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
@@ -52,7 +51,11 @@ nav li:active {
   margin: 15px;
 }
 .main h2 {
-  padding: 15px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .main .main--image img {
   width: 100%;
@@ -63,4 +66,19 @@ nav li:active {
   font-weight: 400;
   display: block;
   margin-top: 15px;
+}
+
+.photo__section {
+  background-color: #e1e1e1;
+}
+.photo__section img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #323232;
+}
+footer p, footer h2 {
+  color: white;
 }/*# sourceMappingURL=bio.css.map */
