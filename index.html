@@ -3,44 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Band Site</title>
+
     <link rel="stylesheet" href="./styles/bio.css" />
     <link rel="stylesheet" href="./styles/partials/stylesheet.css" />
-    <title>Band Site</title>
   </head>
   <body>
-    <div class="header">
-      <nav>
-        <h1>BANDSITE</h1>
-        <div class="header__navigation__buttons">
-          <ul>
-            <li>Biography</li>
-            <li>Shows</li>
-          </ul>
-        </div>
-      </nav>
-
-      <div class="header__background">
-        <div class="header__background--img">
-          <img src="./assets/Images/hero-bio.jpg" alt="hero-bio" />
-        </div>
-        <div class="header__background--text"><h2>The Bees Knees</h2></div>
+    <!-- nav bar -->
+    <nav>
+      <h1>
+        <a
+          href="./index.html"
+          style="text-decoration: none; color: inherit; font-family: inherit"
+          >Bandsite</a
+        >
+      </h1>
+      <div class="navigation__buttons">
+        <ul>
+          <li>Biography</li>
+          <li>Shows</li>
+        </ul>
       </div>
+    </nav>
+    <!-- nav bar -->
+
+    <div class="header">
+      <img src="./assets/Images/hero-bio.jpg" alt="" />
+      <h2>The Bees Knees</h2>
     </div>
-    <div class="main">
-      <section class="about_section">
+
+    <main>
+      <section class="about__section">
         <h2>About the Musicians</h2>
+        <img src="./assets/Images/band.jpg" alt="band-photo" />
 
-        <div class="about_section main--image">
-          <img src="/assets/Images/band.jpg" alt="" />
-        </div>
-        <p class="about_section">
-          "We push each other to be the best. It's not uncommon for one of us to
-          say 'this needs to be better, back to the drawing board'"
+        <p>
+          “We push each other to be the best. It’s not uncommon for one of us to
+          say ‘this needs to be better, back to the drawing board’”
         </p>
+        <br />
         <p>- Lead vocalist of The Bees Knees</p>
-
+        <br />
         <p>The Bees Knees</p>
-
+        <br />
         <p>
           The Bees Knees is a pop rock band originating from San Francisco,
           California. The band consists a dynamic lineup featuring two lead
@@ -51,7 +56,7 @@
           band could succeed even further with more support, pushing The Bees
           Knees to sign with a well known record label.
         </p>
-
+        <br />
         <p>
           From there, the band has soared, gaining international recognition and
           ranking in the top 10 on the Poster Charts. New fans immediately fell
@@ -63,79 +68,98 @@
           to be released in early 2024.
         </p>
       </section>
-    </div>
-    <section class="photo__section">
-      <h2>Photo Gallery</h2>
 
-      <img
-        src="./assets/Images/Photo-gallery-1.jpg"
-        alt="Photo-gallery-1.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-2.jpg"
-        alt="Photo-gallery-2.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-3.jpg"
-        alt="Photo-gallery-3.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-4.jpg"
-        alt="Photo-gallery-4.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-5.jpg"
-        alt="Photo-gallery-5.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-6.jpg"
-        alt="Photo-gallery-6.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-7.jpg"
-        alt="Photo-gallery-7.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-8.jpg"
-        alt="Photo-gallery-8.jpg"
-      />
-      <img
-        src="./assets/Images/Photo-gallery-9.jpg"
-        alt="Photo-gallery-9.jpg"
-      />
-    </section>
+      <section class="photo__section">
+        <h2>Photo Gallery</h2>
+        <img
+          src="./assets/Images/Photo-gallery-1.jpg"
+          alt="Photo-gallery-1.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-2.jpg"
+          alt="Photo-gallery-2.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-3.jpg"
+          alt="Photo-gallery-3.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-4.jpg"
+          alt="Photo-gallery-4.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-5.jpg"
+          alt="Photo-gallery-5.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-6.jpg"
+          alt="Photo-gallery-6.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-7.jpg"
+          alt="Photo-gallery-7.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-8.jpg"
+          alt="Photo-gallery-8.jpg"
+        />
+        <img
+          src="./assets/Images/Photo-gallery-9.jpg"
+          alt="Photo-gallery-9.jpg"
+        />
+      </section>
+    </main>
     <footer>
       <section>
         <div class="footer get_intouch">
           <h2>Get in Touch</h2>
-          <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook_icon" />
-          <img
-            src="./assets/Icons/SVG/Icon-instagram.svg"
-            alt="instagram_icon"
-          />
-          <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter_icon" />
+          <a href="https://www.facebook.com/" style="text-decoration: none">
+            <img
+              src="./assets/Icons/SVG/Icon-facebook.svg"
+              alt="facebook_icon"
+            />
+          </a>
+          <a href="https://www.instagram.com/" style="text-decoration: none">
+            <img
+              src="./assets/Icons/SVG/Icon-instagram.svg"
+              alt="instagram_icon"
+            />
+          </a>
+          <a href="https://twitter.com" style="text-decoration: none">
+            <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter_icon" />
+          </a>
         </div>
 
         <div class="footer--info">
           <h2>The Bees Knees Management</h2>
           <br />
-          <p>503 Broadway Penthouse, New York, NY 10012, USA</p>
-          <br />
-          <p>info@thebeesknees.com</p>
+          <p>
+            <a href="mailto:info@thebeesknees.com" style="text-decoration: none"
+              >info@thebeesknees.com</a
+            >
+          </p>
           <br />
 
           <h2>Limitless Artist Group</h2>
           <br />
-          <p>Booking Agent for US / South America / Japan</p>
-          <br />
-          <p>booking@limitlessag.com</p>
+          <p>
+            <a
+              href="mailto:booking@limitlessag.com"
+              style="text-decoration: none"
+              >booking@limitlessag.com</a
+            >
+          </p>
           <br />
 
           <h2>ARCH Entertainment</h2>
           <br />
-          <p>Booking Agent for UK / EU / AU</p>
-          <br />
-          <p>booking@archentertainment.com</p>
+          <p>
+            <a
+              href="mailto:booking@archentertainment.com"
+              style="text-decoration: none"
+              >booking@archentertainment.com</a
+            >
+          </p>
           <br />
         </div>
 

@@ -1,6 +1,3 @@
-$layout-breakpoint-small: 320px 767px;
-@media (min-width: $layout-breakpoint-small) {
-}
 @mixin page_header--font {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -14,7 +11,7 @@ $layout-breakpoint-small: 320px 767px;
 }
 
 @mixin subheader--font {
-  font-size: 0.875rem;
+  font-size: 1.3rem;
   line-height: 1.375rem;
   font-weight: 600;
 }
@@ -36,83 +33,108 @@ $layout-breakpoint-small: 320px 767px;
   line-height: 1.25rem;
   font-weight: 700;
 }
+
 $color-bandsite-black: #323232;
 $color-silver: #afafaf;
 $color-white: white;
 
+//--------------------------------
+
 nav {
   @include page_header--font;
-  padding-top: 1.25rem;
-
+  padding-top: 1rem;
+  width: 100%;
   background-color: $color-bandsite-black;
   color: white;
   text-align: center;
-
-  ul {
-    @include subheader--font;
-    padding-top: 0.625rem;
-
-    display: flex;
-
-    list-style: none;
-    justify-content: center;
-    gap: 50%;
-  }
-
-  li:hover,
-  li:active {
-    border: 0.1rem solid $color-white;
-
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
 }
 
-.header__background {
-  position: relative;
-  height: 100%;
-
-  background-color: #e1e1e1;
-
-  .header__background--img img {
-    width: 100%;
-    height: 30%;
-  }
-  .header__background--text h2 {
-    @include section_header--font;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
-
-    color: $color-white;
-    text-align: center;
-  }
-}
-.main {
+/* Define styles for the navigation links */
+nav ul {
+  @include subheader--font;
+  padding-top: 0.625rem;
   display: flex;
-  flex-direction: column;
-  margin: 0.938rem;
+  list-style: none;
+  justify-content: center;
+  gap: 50%;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* Apply hover effect */
+nav ul li:hover a {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul li:hover::before,
+nav ul li:active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: $color-white;
+}
+
+.header {
+  position: relative;
 
   h2 {
     @include section_header--font;
-    padding-bottom: 0.625rem;
-    padding-top: 0.625rem;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
   }
 
-  .main--image img {
+  img {
+    display: block;
+    object-fit: cover;
     width: 100%;
   }
-  p {
-    @include body--font();
+}
+
+.about__section {
+  width: 90%;
+
+  h2 {
+    @include section_header--font;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+  }
+
+  img {
+    width: 100%; // Set image width to 100%
+    max-width: 100%;
+    height: auto;
+    max-height: 28vh;
+    padding-bottom: 3%;
     display: block;
-    margin-top: 0.938rem;
+    margin: 0 auto;
+  }
+
+  p {
+    @include body--font;
+    font-weight: 400;
+    text-align: left;
   }
 }
-.text--font{
-  @include section_header--font;
-}
+
+
+
 .photo__section {
   background-color: #e1e1e1;
   height: 100%;
@@ -121,27 +143,37 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem; /* Add padding around the photo section */
-
+  padding: 1rem;
   h2 {
     @include section_header--font;
+    margin-left: 0;
+    width: 100%;
   }
-
   img {
-    margin: 0.5rem; /* Add margin around each image */
-    max-width: 100%;
+    margin: 0.5rem;
+    width: 100%;
     height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  img:hover {
+    filter: grayscale(0%);
   }
 }
 
 footer {
   background-color: $color-bandsite-black;
-text-align:left;
-padding-left: 1rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
   h2 {
     color: $color-white;
     @include section_header--font;
   }
+
   p {
     color: $color-white;
   }
@@ -154,6 +186,7 @@ padding-left: 1rem;
     width: 30px;
     height: 30px;
   }
+  .footer--copyright {
+    margin: 30px;
+  }
 }
-
-

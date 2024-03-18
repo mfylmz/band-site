@@ -2,13 +2,16 @@ nav {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding-top: 1.25rem;
+  padding-top: 1rem;
+  width: 100%;
   background-color: #323232;
   color: white;
   text-align: center;
 }
+
+/* Define styles for the navigation links */
 nav ul {
-  font-size: 0.875rem;
+  font-size: 1.3rem;
   line-height: 1.375rem;
   font-weight: 600;
   padding-top: 0.625rem;
@@ -17,62 +20,81 @@ nav ul {
   justify-content: center;
   gap: 50%;
 }
-nav li:hover,
-nav li:active {
-  border: 0.1rem solid white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+
+nav ul li {
+  position: relative;
 }
 
-.header__background {
-  position: relative;
-  height: 100%;
-  background-color: #e1e1e1;
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
 }
-.header__background .header__background--img img {
+
+/* Apply hover effect */
+nav ul li:hover a {
+  background-color: #333;
+  color: #fff;
+}
+
+nav ul li:hover::before,
+nav ul li:active::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 30%;
+  height: 0.1rem;
+  background-color: white;
 }
-.header__background .header__background--text h2 {
+
+.header {
+  position: relative;
+}
+.header h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-100%, -50%);
+  left: 5%;
+  transform: translateY(-50%);
   color: white;
-  text-align: center;
+  font-weight: bold;
+}
+.header img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  margin: 0.938rem;
+.about__section {
+  width: 90%;
 }
-.main h2 {
+.about__section h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  padding-bottom: 0.625rem;
-  padding-top: 0.625rem;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: left;
 }
-.main .main--image img {
+.about__section img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 28vh;
+  padding-bottom: 3%;
+  display: block;
+  margin: 0 auto;
 }
-.main p {
+.about__section p {
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-weight: 400;
-  display: block;
-  margin-top: 0.938rem;
-}
-
-.text--font {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
+  font-weight: 400;
+  text-align: left;
 }
 
 .photo__section {
@@ -83,23 +105,33 @@ nav li:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem; /* Add padding around the photo section */
+  padding: 1rem;
 }
 .photo__section h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  margin-left: 0;
+  width: 100%;
 }
 .photo__section img {
-  margin: 0.5rem; /* Add margin around each image */
-  max-width: 100%;
+  margin: 0.5rem;
+  width: 100%;
   height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+.photo__section img:hover {
+  filter: grayscale(0%);
 }
 
 footer {
   background-color: #323232;
+  width: 100%;
   text-align: left;
   padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 footer h2 {
   color: white;
@@ -116,4 +148,7 @@ footer p {
   padding: 4%;
   width: 30px;
   height: 30px;
+}
+.get_intouch .footer--copyright {
+  margin: 30px;
 }/*# sourceMappingURL=bio.css.map */
