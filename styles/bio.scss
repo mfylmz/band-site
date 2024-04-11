@@ -600,3 +600,70 @@ body {
     color: $white-color;
   }
 }
+
+.comment-form {
+  padding: 0.625rem 0.625rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  &--user-image img {
+    flex-direction: row;
+
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+  }
+  .comment-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input:active {
+      border: 1px solid black;
+    }
+  }
+
+  &--comment-text {
+    display: flex;
+    margin: 4px;
+    
+  }
+  &--name-box input {
+   width: 100%;
+    @include desktop {
+      height: 48px;
+    }
+    @include tablet {
+      height: 48px;
+    }
+    @include mobile {
+      height: 36px;
+    }
+  }
+  &--comment-box {
+    input {
+     
+      width: 100%;
+    border-radius: 4px;
+    
+    @include desktop {
+      height: 48px;
+    }
+    @include tablet {
+      height: 48px;
+    }
+    @include mobile {
+      height: 36px;
+    }
+    }
+  }
+
+  &--submit {
+    input {
+      height: 40px;
+    }
+  }
+}

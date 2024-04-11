@@ -654,4 +654,71 @@ body {
 .footer__card--contact-link {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.comment-form {
+  padding: 0.625rem 0.625rem;
+}
+.comment-form__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.comment-form--user-image img {
+  flex-direction: row;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+.comment-form .comment-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comment-form .comment-boxes input:active {
+  border: 1px solid black;
+}
+.comment-form--comment-text {
+  display: flex;
+  margin: 4px;
+}
+.comment-form--name-box input {
+  width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .comment-form--name-box input {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment-form--name-box input {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comment-form--name-box input {
+    height: 36px;
+  }
+}
+.comment-form--comment-box input {
+  width: 100%;
+  border-radius: 4px;
+}
+@media screen and (min-width: 1280px) {
+  .comment-form--comment-box input {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment-form--comment-box input {
+    height: 48px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comment-form--comment-box input {
+    height: 36px;
+  }
+}
+.comment-form--submit input {
+  height: 40px;
 }/*# sourceMappingURL=bio.css.map */
