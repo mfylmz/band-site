@@ -1,0 +1,262 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format(opentype), url("../../assets/fonts/alternative/AvenirNextLTPro.ttf") format(truetype);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format(opentype), url("../../assets/fonts/alternative/AvenirNextLTProDemi.ttf") format(truetype);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format(opentype), url("../../assets/fonts/alternative/AvenirNextLTProBold.ttf") format(truetype);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  font-family: "Avenir Next LT Pro";
+  font-weight: 400;
+}
+
+.comments__conversations {
+  height: 100%;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__conversations {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__conversations {
+    margin: 0;
+    padding: 0 11.25rem;
+  }
+}
+.comments__heading {
+  font-weight: 700;
+  margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .comments__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__heading {
+    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+  }
+}
+.comments__commentscontainer {
+  display: flex;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .comments__commentscontainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__commentscontainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+.comments__userimage {
+  width: 48px;
+  height: 48px;
+  border-radius: 90%;
+  margin: 1.5rem 1.5rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .comments__form {
+    min-width: 460px;
+    margin: 0;
+  }
+}
+.comments__formlabel {
+  margin: 0 auto;
+  color: #AFAFAF;
+  font-family: AvenirNext LT Pro;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+.comments__forminput1 {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  font-family: AvenirNext LT Pro;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 1.5rem;
+}
+.comments__forminput1:hover,
+.comments__forminput1 :active {
+  border: 0.125rem solid #323232;
+}
+.comments__forminput2 {
+  width: 100%;
+  height: 96px;
+  border: 1px solid #AFAFAF;
+  background-color: #FAFAFA;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-top: 0.8125rem;
+  font-family: AvenirNext LT Pro;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 1.5rem;
+}
+.comments__forminput2:active {
+  border: 0.125rem solid #323232;
+}
+.comments__formsubmit {
+  width: 100%;
+  font-family: AvenirNext LT Pro;
+  font-size: 0.875rem;
+  line-height: 2.375rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #323232;
+  border-radius: 0.25rem;
+  padding-top: 0.6875rem;
+  padding-bottom: 0.6875rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__formsubmit {
+    width: 36%;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comments__formsubmit {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+.commentlist_divider {
+  border: 0;
+  border-top: 0.0625rem solid #E1E1E1;
+  margin: 0;
+}
+
+.commentlist {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  overflow: auto;
+}
+@media screen and (min-width: 768px) {
+  .commentlist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .commentlist__container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 460px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .commentlist__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 528px;
+  }
+}
+.commentlist__divider {
+  border: 0;
+  border-top: 0.0625rem solid #E1E1E1;
+  margin: 0;
+}
+.commentlist__item {
+  display: flex;
+}
+@media screen and (min-width: 1280px) {
+  .commentlist__item {
+    display: flex;
+    justify-content: center;
+  }
+}
+.commentlist__userimage {
+  background-color: #E1E1E1;
+  width: 48px;
+  height: 48px;
+  border-radius: 90%;
+  margin: 1.5rem 1rem 0 0;
+}
+.commentlist__group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.commentlist__commentgroup {
+  width: 100%;
+  display: flex;
+}
+.commentlist__username {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .commentlist__username {
+    padding-right: 0.625rem;
+  }
+}
+.commentlist__timestamp {
+  margin: 0;
+  color: #AFAFAF;
+  padding-top: 1.5rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+@media screen and (min-width: 768px) {
+  .commentlist__timestamp {
+    margin: 0;
+  }
+}
+.commentlist__usercomment {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  padding-bottom: 1.5rem;
+}/*# sourceMappingURL=comment.css.map */

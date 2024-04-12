@@ -659,16 +659,43 @@ body {
 .comment-form {
   padding: 0.625rem 0.625rem;
 }
+@media screen and (min-width: 768px) {
+  .comment-form__heading {
+    padding: 4.375rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-form__heading {
+    padding: 4.375rem;
+  }
+}
 .comment-form__wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
 }
 .comment-form--user-image img {
+  background-color: #E1E1E1;
   flex-direction: row;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .comment-form--user-image img {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-form--user-image img {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment-form--user-image img {
+    width: 48px;
+    height: 48px;
+  }
 }
 .comment-form .comment-boxes {
   display: flex;
@@ -676,49 +703,94 @@ body {
   align-items: center;
 }
 .comment-form .comment-boxes input:active {
-  border: 1px solid black;
+  border: 1px solid #323232;
 }
-.comment-form--comment-text {
+.comment-form--label-text {
   display: flex;
   margin: 4px;
+  color: #323232;
 }
-.comment-form--name-box input {
+.comment-form__name-box input {
+  background-color: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .comment-form--name-box input {
+  .comment-form__name-box input {
+    width: 35rem;
     height: 48px;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 768px) {
-  .comment-form--name-box input {
+  .comment-form__name-box input {
+    width: 35rem;
     height: 48px;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .comment-form--name-box input {
+  .comment-form__name-box input {
+    width: 15rem;
     height: 36px;
+    padding: 12px;
   }
 }
-.comment-form--comment-box input {
+.comment-form__comment-box input {
+  background-color: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
   width: 100%;
   border-radius: 4px;
 }
 @media screen and (min-width: 1280px) {
-  .comment-form--comment-box input {
-    height: 48px;
+  .comment-form__comment-box input {
+    width: 35rem;
+    height: 2rem;
+    min-height: 48px;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 768px) {
-  .comment-form--comment-box input {
-    height: 48px;
+  .comment-form__comment-box input {
+    width: 35rem;
+    min-height: 48px;
+    height: 10rem;
+    padding: 16px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .comment-form--comment-box input {
-    height: 36px;
+  .comment-form__comment-box input {
+    width: 15rem;
+    min-height: 36px;
+    height: 7rem;
+    padding: 12px;
   }
 }
 .comment-form--submit input {
+  background-color: #323232;
+  margin-top: 0.625rem;
+  width: 15rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 4px;
   height: 40px;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .comment-form--submit input {
+    width: 35rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-form--submit input {
+    height: 3.5rem;
+    width: 10rem;
+    align-items: end;
+  }
+}
+.comment-form--submit--error {
+  border: 1px solid #d22d2d;
 }/*# sourceMappingURL=bio.css.map */

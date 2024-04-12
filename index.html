@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BandSite</title>
     <link rel="stylesheet" href="./styles/bio.css" />
+    <link rel="stylesheet" href="./styles/comment.css">
   </head>
   <body>
     <header class="background-dark header">
@@ -127,38 +128,42 @@
       </div>
     </div>
 
-    <form>
-      <div class="comment-form">
-        <h3 class="section-headings comment-form__heading">
-          Join the Conversation
-        </h3>
-        <div class="comment-form__wrapper">
-          
-          <div class="comment-form comment-form--user-image">
-            <img
-              src="./assets/Images/Mohan-muruge.jpg"
-              alt="Mohan Muruge Profile Image"
+    <section class="comments">
+      <div class="comments__conversations">
+        <h2 class="comments__heading">Join the Conversation</h2>
+        <div class="comments__commentscontainer">
+          <img
+            class="comments__userimage"
+            src="./assets/images/Mohan-muruge.jpg"
+            alt="user image"
+          />
+          <form id="comments__form" class="comments__form">
+            <label for="fname" class="comments__formlabel">NAME</label>
+            <input
+              type="text"
+              id="fname"
+              class="comments__forminput1 comments__forminput1--active"
+              name="user_name"
+              placeholder="Mohan Muruge"
+              required
             />
-          </div>
-          
-          <div class="comment-boxes">
-          <div class="comment-form--name-box">
-            <label class="comment-form--comment-text">Name</label
-            ><input type="text" placeholder="Enter your name" required />
-          </div>
-          <div class="comment-form--comment-box">
-            <label class="comment-form--comment-text">Comment</label>
-            <input type="text" placeholder="Enter your comment" required />
-          </div>
 
-          <div class="comment-form--submit">
-            <input type="submit" id="comment-form-submit--button"  />
-          </div>
+            <label for="comment" class="comments__formlabel">COMMENT</label>
+            <textarea
+              id="comment"
+              class="comments__forminput2 comments__forminput2--active"
+              name="comment_description"
+              placeholder="Add a new comment"
+              required
+            ></textarea>
+
+            <button class="comments__formsubmit" type="submit">COMMENT</button>
+          </form>
         </div>
-        </div>
-        <script src="./scripts/index-page.js"></script>
       </div>
-    </form>
+    </section>
+    <ul id="commentlist" class="commentlist"></ul>
+    <script src="./scripts/index-page.js"></script>
 
     <footer class="background-dark footer">
       <div class="footer__get-in-touch-section--wrapper">
