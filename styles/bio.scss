@@ -64,6 +64,10 @@ body {
   }
 
   &__nav {
+    a {
+      text-decoration: none;
+      color: $mercury-color;
+    }
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -88,67 +92,6 @@ body {
       color: $white-color;
       border-bottom: 3px solid $white-color;
       font-weight: 700;
-    }
-  }
-}
-
-.logo {
-  text-decoration: none;
-  color: $white-color;
-  display: none;
-  font-size: 1.5rem;
-  line-height: 2rem;
-
-  @include mobile {
-    padding: 1.25rem 0rem 0.3125rem 0rem;
-  }
-
-  @include tablet {
-    padding: 0rem;
-  }
-
-  &--nav {
-    max-width: 7.5rem;
-    max-height: 1.25rem;
-
-    @include mobile {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    @include tablet {
-      margin-left: 2.5rem;
-      display: inline-flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    @include desktop {
-      margin-right: 0rem;
-    }
-  }
-
-  &--mobile {
-    @include mobile {
-      display: inline-block;
-      padding-top: 2.8125rem;
-      padding-bottom: 0.9375rem;
-    }
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    @include mobile {
-      display: none;
-    }
-
-    @include tablet {
-      display: inline-block;
-      padding-left: 2.5rem;
     }
   }
 }

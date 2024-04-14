@@ -1,10 +1,10 @@
 "use strict";
 
-// find and store dom elements to work with
+// find and store dom elements 
 const commentForm = document.querySelector(".comments__form");
 const commentUl = document.querySelector(".commentlist");
 
-// attach an event listener to the comment form
+// attach an event listener 
 commentForm.addEventListener("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
@@ -18,7 +18,7 @@ function handleFormSubmit(event) {
   } else {
     alert("please enter a name and comment");
   }
-  // appendComment(user_name,comment_description);
+  // appendComment
   addComment(user_name, comment_description);
 }
 
@@ -26,54 +26,55 @@ const comments = [
   {
     username: "Victor Pinto",
     comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that  makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains",
+      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+
     timestamp: 11 + "/" + 2 + "/" + 2023,
   },
   {
-    username: "Gary Wong",
+    username: "Christina Cabrera",
     comment:
-      "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He's so talented! I wish I can ride like him one day so i can really enjoy myself!",
-    timestamp: 12 + "/" + 12 + "/" + 2020,
+      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
+    timestamp: 10 + "/" + 28 + "/" + 2023,
   },
   {
-    username: "Theodore Duncan",
+    username: "Isaac Tadesse",
     comment:
-      "How can someone be so good!!! You can tell he lives for this and loves to do it everyday. Everytime I see him I feel instantly happy! He's definitely my favorite ever!",
-    timestamp: 11 + "/" + 15 + "/" + 2018,
+      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
+    timestamp: 10 + "/" + 20 + "/" + 2023,
   },
 ];
 
-// create comment list item <li class=".comment__item"
+// create comment list item
 
 function appendComment() {
-  commentUl.innerHTML = ""; //clear HTML to avoid doubling
-  // sort comments here
+  commentUl.innerHTML = ""; //clear HTML 
+  // sort comments 
   const sortedComments = comments.sort(
     (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
   );
-  // const sortedCommentsTime = sortedComments.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
 
   for (let i = 0; i < comments.length; i++) {
     const commentObj = comments[i];
 
-    //  create <div> element called commentDivItem
+    //  create <div> element 
     const commentDivItemElem = document.createElement("div");
-    // add the class .commentlist__container
+    // add the class 
     commentDivItemElem.classList.add("commentlist__container");
 
-    // create <hr> element called divider
+    // create <hr> element 
     const dividerElem = document.createElement("hr");
     // add the class .commentlist__divider
     dividerElem.classList.add("commentlist__divider");
 
     commentDivItemElem.appendChild(dividerElem);
 
-    //  create <li> element called commentlistItem
+    //  create <li> element 
     const commentlistLi = document.createElement("li");
-    // add the class .commentlist__item
+    // add the class 
     commentlistLi.classList.add("commentlist__item");
 
-    // create <img> element called commentlistImage
+    // create <img> 
     const commentlistImageElem = document.createElement("img");
     commentlistImageElem.setAttribute("src", "./assets/images/User-image.png");
     // add the class .commentlist__userimage
@@ -81,19 +82,19 @@ function appendComment() {
 
     commentlistLi.appendChild(commentlistImageElem);
 
-    //  create <div> element called commentDivGroup
+    //  create <div> 
     const commentDivGroupElem = document.createElement("div");
     // add the class .commentlist__group
     commentDivGroupElem.classList.add("commentlist__group");
 
-    //  create <div> element called commentDivCommentGroup
+    //  create <div> 
     const commentDivCommentGroupElem = document.createElement("div");
     // add the class .commentlist__commentgroup
     commentDivCommentGroupElem.classList.add("commentlist__commentgroup");
 
-    //  create <p> element and add user name
+    //  create <p> 
     const commentUserNameElem = document.createElement("p");
-    // add the class .commentlist__username
+    // add the class 
     commentUserNameElem.classList.add("commentlist__username");
     commentUserNameElem.innerText = commentObj.username;
 
@@ -122,7 +123,7 @@ function appendComment() {
     commentUl.appendChild(commentDivItemElem);
   }
 }
-// runs on page load
+
 appendComment();
 
 // push to comment array and then re render comment list
