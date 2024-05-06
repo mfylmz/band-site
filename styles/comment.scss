@@ -53,15 +53,15 @@
   }
 
   &__userimage {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 90%;
     margin: 1.5rem 1.5rem 0 0;
   }
 
   &__form {
     @include desktop {
-      min-width: 460px;
+      min-width: 28.75rem;
       margin: 0;
     }
   }
@@ -79,7 +79,7 @@
   &__forminput1 {
     width: 100%;
     height: 3rem;
-    border: 1px solid $silver-color;
+    border: 0.063rem solid $silver-color;
     background-color: $alabaster-color;
     border-radius: 0.25rem;
     padding-left: 1rem;
@@ -98,8 +98,8 @@
 
   &__forminput2 {
     width: 100%;
-    height: 96px;
-    border: 1px solid $silver-color;
+    height: 6rem;
+    border: 0.063rem solid $silver-color;
     background-color: $alabaster-color;
     border-radius: 0.25rem;
     padding-left: 1rem;
@@ -173,14 +173,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 460px;
+      max-width: 28.75rem;
     }
 
     @include desktop {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      max-width: 528px;
+      max-width: 33rem;
     }
   }
 
@@ -202,8 +202,8 @@
   &__userimage {
     
     background-color: $mercury-color;
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 90%;
     margin: 1.5rem 1rem 0 0;
   }

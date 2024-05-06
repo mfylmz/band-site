@@ -5,7 +5,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
 }
 
 body {
@@ -37,12 +37,12 @@ body {
   @include tablet {
     justify-content: flex-start;
     flex-direction: row;
-    height: 90px;
+    height: 5.625rem;
   }
 
   @include desktop {
     padding-left: 4.5rem;
-    height: 85px;
+    height: 5.313rem;
   }
 
   &__content {
@@ -88,13 +88,13 @@ body {
 
     &--selected {
       color: $white-color;
-      border-bottom: 3px solid $white-color;
+      border-bottom: 0.188rem solid $white-color;
       font-weight: 700;
     }
 
     &:hover {
       color: $white-color;
-      border-bottom: 3px solid $white-color;
+      border-bottom: 0.188rem solid $white-color;
       font-weight: bold;
     }
   }
@@ -248,12 +248,12 @@ body {
   &__player {
     @include mobile {
       height: 70%;
-      margin-left: 20px;
+      margin-left: 1.25rem;
       width: 90%;
     }
 
     @include tablet {
-      border-radius: 5px;
+      border-radius: 0.313rem;
       width: 56%;
     }
 
@@ -356,7 +356,7 @@ body {
   color: $white-color;
   font-size: 1rem;
   padding: 0rem 2rem;
-  border-radius: 7px;
+  border-radius: 0.438rem;
   cursor: pointer;
 
   @include tablet {

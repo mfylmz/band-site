@@ -1,115 +1,108 @@
 "use strict";
 
-// find and store dom elements 
-const commentForm = document.querySelector(".comments__form");
-const commentUl = document.querySelector(".commentlist");
+// Define the base URL of the API
+const apiUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
+// Define the API key for authentication
+const apiKey = "8283f343-9f66-4104-aacf-f67bf7be4586";
 
-// attach an event listener 
+// Find and store DOM elements to work with
+const commentUl = document.getElementById("commentlist"); // Reference to the <ul> element where comments will be displayed
+const commentForm = document.querySelector(".comments__form"); // Reference to the comment form
+
+// Attach an event listener to the comment form to handle form submission
 commentForm.addEventListener("submit", handleFormSubmit);
 
+// Function to handle form submission
 function handleFormSubmit(event) {
-  event.preventDefault();
+  event.preventDefault(); // Prevent default form submission behavior
+  // Get user input from the form
   const user_name = event.target.user_name.value;
   const comment_description = event.target.comment_description.value;
-  //call a function and send the user_name and comment_description
+  // Call a function to post the new comment if both name and comment are provided
   if (user_name !== "" && comment_description !== "") {
-    appendComment(user_name, comment_description);
-    event.target.reset(); // reset the form inputs, empty form inputs
+    newPost(user_name, comment_description);
+    event.target.reset(); // Reset the form inputs after submission
   } else {
-    alert("please enter a name and comment");
+    alert("Please enter a name and comment"); // Show an alert if either name or comment is missing
   }
-  // appendComment
-  addComment(user_name, comment_description);
 }
 
-const comments = [
-  {
-    username: "Victor Pinto",
-    comment:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
+// Function to fetch comments from the API
+function getComments() {
+  axios
+    .get(`${apiUrl}/comments?api_key=${apiKey}`)
+    .then(function (response) {
+      console.log("API Response:", response); // Log the API response
+      appendToDom(response.data); // Call a function to append comments to the DOM
+    })
+    .catch(function (error) {
+      console.error("Error fetching comments:", error); // Log any errors that occur during fetching comments
+    });
+}
 
-    timestamp: 11 + "/" + 2 + "/" + 2023,
-  },
-  {
-    username: "Christina Cabrera",
-    comment:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    timestamp: 10 + "/" + 28 + "/" + 2023,
-  },
-  {
-    username: "Isaac Tadesse",
-    comment:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    timestamp: 10 + "/" + 20 + "/" + 2023,
-  },
-];
+// Call the function to fetch comments when the page loads
+getComments();
 
-// create comment list item
+// Function to post a new comment to the API
+function newPost(name, comment) {
+  axios
+    .post(`${apiUrl}/comments?api_key=${apiKey}`, {
+      name: name,
+      comment: comment,
+    })
+    .then(function (response) {
+      console.log("New comment added:", response); // Log the response after successfully adding a new comment
+      getComments(); // Fetch comments again after adding a new comment
+    })
+    .catch(function (error) {
+      console.error("Error adding new comment:", error); // Log any errors that occur during adding a new comment
+    });
+}
 
-function appendComment() {
-  commentUl.innerHTML = ""; //clear HTML 
-  // sort comments 
-  const sortedComments = comments.sort(
+// Function to append comments to the DOM
+function appendToDom(commentData) {
+  commentUl.innerHTML = ""; // Clear existing comments before appending new ones
+  // Sort comments by timestamp in descending order
+  const sortedComments = commentData.sort(
     (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
   );
-  
-
-  for (let i = 0; i < comments.length; i++) {
-    const commentObj = comments[i];
-
-    //  create <div> element 
+  sortedComments.forEach(function (commentObj) {
+    // Create DOM elements to display each comment
     const commentDivItemElem = document.createElement("div");
-    // add the class 
     commentDivItemElem.classList.add("commentlist__container");
 
-    // create <hr> element 
     const dividerElem = document.createElement("hr");
-    // add the class .commentlist__divider
     dividerElem.classList.add("commentlist__divider");
-
     commentDivItemElem.appendChild(dividerElem);
 
-    //  create <li> element 
     const commentlistLi = document.createElement("li");
-    // add the class 
     commentlistLi.classList.add("commentlist__item");
 
-    // create <img> 
     const commentlistImageElem = document.createElement("img");
     commentlistImageElem.setAttribute("src", "./assets/images/User-image.png");
-    // add the class .commentlist__userimage
     commentlistImageElem.classList.add("commentlist__userimage");
-
     commentlistLi.appendChild(commentlistImageElem);
 
-    //  create <div> 
     const commentDivGroupElem = document.createElement("div");
-    // add the class .commentlist__group
     commentDivGroupElem.classList.add("commentlist__group");
 
-    //  create <div> 
     const commentDivCommentGroupElem = document.createElement("div");
-    // add the class .commentlist__commentgroup
     commentDivCommentGroupElem.classList.add("commentlist__commentgroup");
 
-    //  create <p> 
     const commentUserNameElem = document.createElement("p");
-    // add the class 
     commentUserNameElem.classList.add("commentlist__username");
-    commentUserNameElem.innerText = commentObj.username;
+    commentUserNameElem.innerText = commentObj.name;
 
-    //  create <p> element and add timestamp
     const commentTimestampElem = document.createElement("p");
-    // add the class .commentlist__timestamp
     commentTimestampElem.classList.add("commentlist__timestamp");
-    commentTimestampElem.innerText = commentObj.timestamp;
+    commentTimestampElem.innerText = new Date(
+      commentObj.timestamp
+    ).toLocaleDateString();
 
     commentDivCommentGroupElem.appendChild(commentUserNameElem);
     commentDivCommentGroupElem.appendChild(commentTimestampElem);
 
-    //  create <p> element and add usercomment
     const commentUserCommentElem = document.createElement("p");
-    // add the class .commentlist__usercomment
     commentUserCommentElem.classList.add("commentlist__usercomment");
     commentUserCommentElem.innerText = commentObj.comment;
 
@@ -117,22 +110,7 @@ function appendComment() {
     commentDivGroupElem.appendChild(commentUserCommentElem);
 
     commentlistLi.appendChild(commentDivGroupElem);
-
     commentDivItemElem.appendChild(commentlistLi);
-
-    commentUl.appendChild(commentDivItemElem);
-  }
-}
-
-appendComment();
-
-// push to comment array and then re render comment list
-function addComment(username, comment, timestamp) {
-  var dt = new Date();
-  comments.unshift({
-    username: username,
-    comment: comment,
-    timestamp: dt.getMonth() + 1 + "/" + dt.getDate() + "/" + dt.getFullYear(),
+    commentUl.appendChild(commentDivItemElem); // Append each comment to the comments list
   });
-  appendComment();
 }
