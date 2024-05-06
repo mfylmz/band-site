@@ -5,7 +5,7 @@
 * {
   font-family: "AvenirNext LT Pro", "Sans Serif";
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
 }
 body {
   font-weight: 400;
@@ -86,11 +86,11 @@ body {
     }
     &:hover {
       color: $white-color;
-      border-bottom: 3px solid $white-color;
+      border-bottom: 0.188rem solid $white-color;
     }
     &--selected {
       color: $white-color;
-      border-bottom: 3px solid $white-color;
+      border-bottom: 0.188rem solid $white-color;
       font-weight: 700;
     }
   }
@@ -566,16 +566,16 @@ body {
 
     border-radius: 50%;
     @include mobile {
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
     }
     @include desktop {
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
     }
     @include tablet {
-      width: 48px;
-      height: 48px;
+      width: 3rem;
+      height: 3rem;
     }
   }
   .comment-boxes {
@@ -584,62 +584,62 @@ body {
     align-items: center;
 
     input:active {
-      border: 1px solid $bandsite-black;
+      border: 0.063rem solid $bandsite-black;
     }
   }
 
   &--label-text {
     display: flex;
-    margin: 4px;
+    margin: 0.25rem;
     color: $bandsite-black;
   }
 
   &__name-box input {
     background-color: $white-color;
-    border: 1px solid $mercury-color;
-    border-radius: 4px;
+    border: 0.063rem solid $mercury-color;
+    border-radius: 0.25rem;
     width: 100%;
     @include desktop {
       width: 35rem;
-      height: 48px;
-      padding: 16px;
+      height: 3rem;
+      padding: 1rem;
     }
     @include tablet {
       width: 35rem;
-      height: 48px;
-      padding: 16px;
+      height: 3rem;
+      padding: 1rem;
     }
     @include mobile {
       width: 15rem;
-      height: 36px;
-      padding: 12px;
+      height: 2.25rem;
+      padding: 0.75rem;
     }
   }
   &__comment-box {
     input {
       background-color: $white-color;
-      border: 1px solid $mercury-color;
-      border-radius: 4px;
+      border: 0.063rem solid $mercury-color;
+      border-radius: 0.25rem;
       width: 100%;
-      border-radius: 4px;
+      border-radius: 0.25rem;
 
       @include desktop {
         width: 35rem;
         height: 2rem;
-        min-height: 48px;
-        padding: 16px;
+        min-height: 2.375rem;
+        padding: 1rem;
       }
       @include tablet {
         width: 35rem;
-        min-height: 48px;
+        min-height: 3rem;
         height: 10rem;
-        padding: 16px;
+        padding: 1rem;
       }
       @include mobile {
         width: 15rem;
-        min-height: 36px;
+        min-height: 2.25rem;
         height: 7rem;
-        padding: 12px;
+        padding: 0.75rem;
       }
     }
   }
@@ -652,8 +652,8 @@ body {
       color: $white-color;
       font-size: 1rem;
       padding: 0.5rem 2rem;
-      border-radius: 4px;
-      height: 40px;
+      border-radius: 0.25rem;
+      height: 2.5rem;
       cursor: pointer;
 
       @include tablet {
@@ -667,7 +667,7 @@ body {
       }
     }
     &--error {
-      border: 1px solid #d22d2d;
+      border: 0.063rem solid #d22d2d;
     }
   }
 }
